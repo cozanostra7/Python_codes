@@ -77,3 +77,7 @@ def get_dislike(article,user):
           <a class="text-danger" href="{% url 'dislike' article.pk 'add' %}"><i class="bi bi-hand-thumbs-down"></i></a>
         {% endif %}
 
+#urls.py 
+
+    path('like/<int:pk>/<str:action>/',add_delete_like,name='like'),
+    path('dislike/<int:pk>/<str:action>/',add_delete_dislike,name='dislike'),
